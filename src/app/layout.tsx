@@ -1,6 +1,31 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Cormorant_SC, Kaushan_Script, Playfair_Display, DM_Serif_Text } from "next/font/google";
 import "./globals.css";
+import {  } from "next/font/google";
+
+const cormorantsc = Cormorant_SC({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-cormorant",
+});
+
+const kaushan = Kaushan_Script({
+  subsets: ["latin"],
+  weight: "400", 
+  variable: "--font-kaushan",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "900"], // Include desired weights
+  variable: "--font-playfair-display", // Assign its CSS variable
+});
+
+const dmSerif = DM_Serif_Text({
+  subsets: ["latin"],
+  weight: "400", // This font only has a '400' weight
+  variable: "--font-dm-serif-text", // Assign its CSS variable
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${cormorantsc.variable} ${kaushan.variable} ${playfair.variable} ${dmSerif.variable} antialiased`}
       >
         {children}
       </body>
