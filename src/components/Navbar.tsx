@@ -17,7 +17,7 @@ function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <header className="absolute inset-x-0 top-0 z-50 p-4 md:p-6 font-dm-serif-text">
+        <header className="absolute inset-x-0 top-0 z-50 p-4 md:p-6 font-">
             <div className="mx-auto max-w-5xl">
                 <div className="px-4 md:px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
                     <nav
@@ -69,7 +69,7 @@ function Navbar() {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="px-2 py-1 text-md text-black/80 rounded-xl border border-white/20 bg-white/10 backdrop-blur-lg shadow-lg transition-colors duration-300 hover:bg-white/20 font-semibold"
+                                    className="px-2 py-1 text-md text-black/80 rounded-xl border border-white/20 bg-white/10 backdrop-blur-lg shadow-lg transition-colors duration-300 hover:bg-white/20 hover:scale-110 font-semibold"
                                 >
                                     {link.name}
                                 </Link>
@@ -81,7 +81,7 @@ function Navbar() {
                         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                             <Link
                                 href={"/"}
-                                className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold  shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-colors duration-200"
+                                className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-colors duration-200 hover:scale-110"
                             >
                                 Book Now
                             </Link>
